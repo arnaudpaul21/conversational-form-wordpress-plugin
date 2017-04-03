@@ -1,0 +1,156 @@
+
+/* Conversation Style */
+
+.conversational-form-container {
+    min-height: 150px;
+    max-width: 980px;
+    width: 100%;
+    margin:  auto;
+}
+.conversational-form-container>form input,.conversational-form-container>form select {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    border: 0;
+}
+
+cf-input-control-elements {
+    max-height: 45px;
+    background: #fff;
+    z-index: 10;
+    width: 100%;
+    overflow: auto;
+}
+cf-chat-response.peak-thumb.show {
+    margin-left: 20%;
+    transition: all 0.4s ease;
+}
+
+cf-chat-response.peak-thumb {
+    margin-left: 100%;
+    transition: all 0.4s ease;
+}
+
+cf-chat-response {}
+
+cf-chat-response:not(.peak-thumb) {
+    transition: all 0.4s ease;
+    margin-left: -100%;
+}
+
+cf-chat-response:not(.peak-thumb).show {
+    transition: all 0.4s ease;
+    margin-left: 0;
+}
+
+cf-chat-response text:not(.contains-image) {
+    padding: 5px 10px;
+}
+
+cf-radio-button.cf-button {
+    padding: 5px;
+    margin-right: 5px !important;
+    margin-bottom: 0px !important;
+    color: rgb(96,168,138);
+    line-height: 18px;
+}
+.cf-button:hover, .cf-button:focus, .cf-button.highlight {
+    background: rgb(96,168,138);
+    color: #fff;
+}
+cf-radio-button.cf-button cf-radio {
+    display: none;
+}
+
+cf-list {padding: 0 20px;}
+
+/*cf-input,cf-textarea {
+    display: block;
+    position: absolute;
+    width: calc(100% - 20px);
+    height: auto;
+    bottom: 10px;
+    left: 10px;
+    -webkit-perspective: 2000px;
+    -moz-perspective: 2000px;
+    -ms-perspective: 2000px;
+    perspective: 2000px;
+}*/
+cf-chat-response {
+    max-width: 80%;
+    width: 80%;
+}
+/*cf-chat{
+    padding: 0 !important;
+    height: calc(100% - 45px);
+    display: block !important;
+}
+cf-chat:before{
+    content: "";
+    height: 40px;
+}
+*/cf-chat::-webkit-scrollbar { 
+    display: none; 
+}
+
+
+.conversational-form-container .error_message {
+    position: absolute;
+    z-index: 10000;
+    width: 100%;
+    background: rgba(255, 0, 0, 0.4);
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    padding: 10% 10% 1%;
+    display: none;
+}
+.conversational-form-container .success_message {
+    position: absolute;
+    z-index: 10000;
+    width: 100%;
+    background: rgba(0, 255, 0, 0.4);
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    padding: 10% 10% 1%;
+    display: none;
+}
+
+
+
+
+
+
+
+.cf-button {
+    background: rgba(96, 168, 138, 0.2);
+    color: #60a88a;
+}
+cf-radio-button.cf-button[checked=checked] cf-radio {
+    background: #60a88a;
+}
+
+cf-upload-file-ui {
+    color: #60a88a;
+}
+.cf-button.cf-checkbox-button.highlight cf-checkbox,.cf-button.cf-checkbox-button:focus cf-checkbox,.cf-button.cf-checkbox-button:hover cf-checkbox {
+    background: #60a88a;
+}
+cf-radio-button.cf-button.highlight cf-radio,cf-radio-button.cf-button:focus cf-radio,cf-radio-button.cf-button:hover cf-radio {
+    background: #60a88a;
+}
+cf-chat-response.user text {
+    background: rgba(96, 168, 138, 0.2);
+}
+cf-chat-response.user {
+
+    color: #60a88a;
+}
+cf-input-button.cf-input-button:focus, cf-input-button.cf-input-button:hover {
+    background: rgba(96, 168, 138, 0.2);
+    border: 1px solid #60a88a;
+}

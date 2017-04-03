@@ -1,0 +1,266 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Conversational form\n"
+"POT-Creation-Date: 2017-03-22 11:43+0100\n"
+"PO-Revision-Date: 2017-03-22 11:43+0100\n"
+"Last-Translator: \n"
+"Language-Team: Arnaud PAUL <arnaud.paul@viadigis.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: conversational-form.php\n"
+"X-Poedit-SearchPath-1: views\n"
+
+#: conversational-form.php:92
+msgid "Example form"
+msgstr "Formulaire d’exemple"
+
+#: conversational-form.php:93
+msgid "example-form"
+msgstr "formulaire-exemple"
+
+#: conversational-form.php:218 views/admin/inputs.php:10
+#: views/admin/inputs.php:13
+msgid "Input type "
+msgstr "Type d'entrée"
+
+#: conversational-form.php:219
+msgid "Input value "
+msgstr "Valeur(s) de l’entrée"
+
+#: conversational-form.php:220 views/admin/inputs.php:13
+msgid "eg : Project manager | Web designer "
+msgstr "ex: Chef de projet | Directeur Marketing"
+
+#: conversational-form.php:221 views/admin/inputs.php:20
+msgid "Questions "
+msgstr "Questions"
+
+#: conversational-form.php:222 views/admin/inputs.php:20
+msgid "Your question here (place | between each question if multiples) "
+msgstr "Votre question ici (placer un | entre chaque questions si multiples)"
+
+#: conversational-form.php:223 views/admin/inputs.php:25
+msgid "Input name "
+msgstr "Nom du champs"
+
+#: conversational-form.php:224 views/admin/inputs.php:25
+#: views/admin/inputs.php:29
+msgid "eg:"
+msgstr "ex:"
+
+#: conversational-form.php:225 views/admin/inputs.php:29
+msgid "Validation pattern "
+msgstr "Pattern de validation "
+
+#: conversational-form.php:226 views/admin/inputs.php:35
+msgid "Errors "
+msgstr "Erreurs "
+
+#: conversational-form.php:227 views/admin/inputs.php:35
+msgid "Your error message here ( place | between each message if multiple"
+msgstr "Votre message d'erreur ici (placer un | entre chaque message si multiples)"
+
+#: conversational-form.php:228 views/admin/inputs.php:43
+#: views/admin/params.php:100
+msgid "Register"
+msgstr "Enregistrer"
+
+#: conversational-form.php:315 conversational-form.php:361
+#: conversational-form.php:390 conversational-form.php:432
+#: conversational-form.php:478 conversational-form.php:507
+#: conversational-form.php:545 conversational-form.php:598
+#: conversational-form.php:688
+msgid "Error : "
+msgstr "Erreur: "
+
+#: conversational-form.php:322 conversational-form.php:368
+#: conversational-form.php:439
+msgid "Error, please check the input format."
+msgstr "Erreur, veuillez vérifier que le format de l'entrée est correct"
+
+#: conversational-form.php:397 conversational-form.php:486
+#: conversational-form.php:513 conversational-form.php:553
+msgid "Error, please check form ID."
+msgstr "Erreur, veuillez vérifier que l'ID du formulaire est correct"
+
+#: conversational-form.php:605 conversational-form.php:694
+msgid "Error, please check all parameter are present"
+msgstr "Erreur, veuillez vérifier que tous le paramètres sont présents"
+
+#: conversational-form.php:653
+msgid "A new person filled the form "
+msgstr "Une nouvelle personne à rempli le formulaire"
+
+#: conversational-form.php:653
+msgid "Here are his/her infos "
+msgstr "Voici ses informations"
+
+#: conversational-form.php:656
+msgid "Input name"
+msgstr "Nom du champs"
+
+#: conversational-form.php:656
+msgid "Value"
+msgstr "Valeur"
+
+#: conversational-form.php:683
+msgid "Error sending email "
+msgstr "Erreur dans l'envoi du mail"
+
+#: conversational-form.php:786
+msgid "No question found"
+msgstr "Aucune question"
+
+#: conversational-form.php:787
+msgid "Your answer here"
+msgstr "Votre réponse ici..."
+
+#: conversational-form.php:788
+msgid "An answer is required to continue"
+msgstr "Une réponse est requise pour pouvoir continuer"
+
+#: conversational-form.php:789
+msgid "Incorrect input"
+msgstr "Votre entrée est incorrecte"
+
+#: conversational-form.php:790
+msgid "File download failed"
+msgstr "Le téléchargement du fichier a échoué"
+
+#: conversational-form.php:791
+msgid "File sire error"
+msgstr "Le téléchargement du fichier a échoué"
+
+#: conversational-form.php:792
+msgid "No result for <strong>{input-value}</strong>"
+msgstr "Pas de résultats pour <strong>{input-value}</strong>"
+
+#: conversational-form.php:793
+msgid " and "
+msgstr " et "
+
+#: conversational-form.php:794
+msgid "Missing input"
+msgstr "Entrée manquante ..."
+
+#: conversational-form.php:795
+msgid "type1 general|type2 general"
+msgstr "type1 général|type2 général"
+
+#: conversational-form.php:798 conversational-form.php:799
+msgid "Please enter a text"
+msgstr "S'il vous plaît écrire un texte."
+
+#: conversational-form.php:800
+msgid "What's your name ?"
+msgstr "Quel est votre nom?"
+
+#: conversational-form.php:801
+msgid "Need your email"
+msgstr "Besoin de votre email."
+
+#: conversational-form.php:802
+msgid "Please enter a password"
+msgstr "S'il vous plaît entrer le mot de passe"
+
+#: conversational-form.php:803
+msgid "What's your phone number"
+msgstr "Quel est votre numéro de téléphone?"
+
+#: conversational-form.php:804
+msgid "Please select one of them"
+msgstr "Je veux que vous sélectionnez un d'eux."
+
+#: conversational-form.php:805
+msgid "Select as much as you want"
+msgstr "Sélectionnez autant que vous le souhaitez."
+
+#: conversational-form.php:806
+msgid "Select one of these options"
+msgstr "Choisissez l'une de ces options."
+
+#: conversational-form.php:807
+msgid "Generalities 1|Generalities 2|Generalities 3"
+msgstr "Généralités1|Généralités2|Généralités3.."
+
+#: conversational-form.php:816
+msgid "Well done, form have been sent"
+msgstr "Bravo, le formulaire a bien été envoyé !"
+
+#: conversational-form.php:817
+msgid "Sorry there was an error sending form, try again later"
+msgstr "Le formulaire n'a pas pu être envoyé, veuillez réessayer ultérieurement"
+
+#: views/admin/header.php:5
+msgid "Conversational forms"
+msgstr "Formulaires conversationnels"
+
+#: views/admin/header.php:7
+msgid "Choose a form "
+msgstr "Choisir un formulaire"
+
+#: views/admin/header.php:27
+msgid "Add form "
+msgstr "Ajouter un formulaire"
+
+#: views/admin/header.php:29
+msgid "Delete form "
+msgstr "Supprimer le formulaire"
+
+#: views/admin/params.php:4
+msgid "Form shortcode "
+msgstr "Shortcode du formulaire"
+
+#: views/admin/params.php:10 views/admin/params.php:11
+msgid "Text"
+msgstr "Texte"
+
+#: views/admin/params.php:16 views/admin/params.php:17
+msgid "Phone"
+msgstr "Téléphone"
+
+#: views/admin/params.php:22 views/admin/params.php:23
+msgid "Email"
+msgstr "Email"
+
+#: views/admin/params.php:30 views/admin/params.php:31
+msgid "Text area"
+msgstr "Zone de texte"
+
+#: views/admin/params.php:36 views/admin/params.php:37
+msgid "Select"
+msgstr "Select"
+
+#: views/admin/params.php:44
+msgid "Advanced parameters"
+msgstr "Paramètres avancés"
+
+#: views/admin/params.php:49
+msgid "Redirect link"
+msgstr "Lien de redirection"
+
+#: views/admin/params.php:57
+msgid "Data treatment link"
+msgstr "Lien de traitement des données"
+
+#: views/admin/params.php:65
+msgid "Confirmation message"
+msgstr "Message de confirmation"
+
+#: views/admin/params.php:73
+msgid "Email to ?"
+msgstr "Email ?"
+
+#: views/admin/params.php:81
+msgid "Robot image"
+msgstr "Image du robot"
+
+#: views/admin/params.php:89
+msgid "User image"
+msgstr "Image de l'utilisateur"

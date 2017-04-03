@@ -1,0 +1,184 @@
+
+*{
+	box-sizing: border-box;
+}
+.container{
+	display: block;
+}
+.row{
+	overflow: hidden;
+}
+.col{
+	float: left;
+	padding: 1%;
+}
+.third{
+	width: calc(33.33% - 2px);
+}
+.two_third{
+	width: calc(66.66% - 2px);
+}
+
+
+
+
+
+
+#inputsList li.input {
+    background: #fff;
+    padding: 5px;
+    position: relative;
+    box-shadow: 1px 1px 4px #848383;
+}
+#inputsList li.input>form>.row:first-child {
+    cursor: move;
+}
+#inputsList li.input .delete_input{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 5px;
+	right: 5px;
+	font-size: 15px;
+	line-height: 20px;
+	text-align: center;
+	cursor: pointer;
+}
+#inputsList li.input .questions input {
+    width: calc(100% - 80px);
+}
+#inputsList li.input .errors input {
+    width: calc(100% - 54px);
+}
+#inputsList li.input .questions,#inputsList li.input .errors {
+    width: 100%;
+}
+
+
+#inputsList li.input .name input {
+    width: calc(100% - 110px);
+}
+
+#inputsList li.input .pattern input {
+    width: calc(100% - 137px);
+}
+
+#inputsList li.input .label input {
+    width: calc(100% - 110px);
+}
+
+#inputsList li.input .submit input {
+    display: inline-block;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #b9b8b8;
+    border: 1px solid transparent;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    line-height: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.done {
+    background:green !important;
+    color: #fff !important;
+    transition: all 0.4s ease; 
+}
+.error {
+    background:red !important;
+    color: #fff !important;
+    transition: all 0.4s ease; 
+}
+
+
+#inputsList li.input .submit {
+    margin: 0;
+}
+
+form#add_form {
+    margin-bottom: 10px;
+}
+#add_btn, #delete_btn {
+    text-decoration: none;
+    border: 0;
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+#add_btn{
+	background-color: green;
+}
+#delete_btn{
+	background-color: red;
+}
+
+
+
+
+#add_inputs .add_input {
+    text-align: center;
+    padding-top: 5px;
+    cursor: pointer;
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    background-color: #fff;
+    box-shadow: 1px 1px 4px #848383;
+    overflow: hidden;
+
+}
+
+#add_inputs .add_input img {
+    width: 30px;
+    height: 30px;
+}
+
+#add_inputs .add_input h4 {
+    margin: 15px 5px;
+}
+
+
+
+#advanced_params {
+    background: #fff;
+    margin: 10px 0;
+}
+
+
+
+#advanced_params h3 {
+    line-height: 30px;
+    padding: 5px 15px;
+    background: #b9b8b8;
+    color: #fff;
+    font-weight: 300;
+    margin: 0;
+}
+#advanced_params input {
+    width: 100%;
+    height: 30px;
+    line-height: 25px;
+}
+div#advanced_params label {
+    line-height: 16px;
+    padding-top: 7px;
+    display: block;
+}
+
+#advanced_params input[type="submit"] {
+    display: inline-block;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #b9b8b8;
+    border: 1px solid transparent;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    line-height: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
