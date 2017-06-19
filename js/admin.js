@@ -283,8 +283,8 @@ function escapeHtml(text) {
 						// if(inputType != 'radio' && inputType != 'checkbox' && inputType != 'select' ){
 							html+= '<div class="row"><div class="questions col" style="padding-bottom:20px"><label>'+cf_datas.input_labels.input_questions_label+': <textarea rows="2" cols="89" style="margin-bottom:-17px" name="questions_input" placeholder="'+cf_datas.input_labels.input_questions_placeholder+'" ></textarea></label></div></div>';
 						// }
-						
-							html+= '<div class="row"><div class="name col third"><label>'+cf_datas.input_labels.input_name+': <input type="text" name="name_input" placeholder="'+cf_datas.input_labels.input_eg+' first_name" value="'+input+'"></label></div>';
+							
+							html+= '<div class="row"><div class="name col third"><label>'+cf_datas.input_labels.input_name+': <input type="text" name="name_input" placeholder="'+cf_datas.input_labels.input_eg+' first_name" value=""></label></div>';
 							if(inputType == 'text'){
 								html+='<div class="pattern col two_third"><label>'+cf_datas.input_labels.input_validation_pattern+': <input type="text" name="pattern_input" placeholder="'+cf_datas.input_labels.input_eg+' ^(?:0|\(?\+33\)?\s?|0033\s?)[1-79](?:[\.\-\s]?\d\d){4}$" value=""></label></div></div>';
 							}

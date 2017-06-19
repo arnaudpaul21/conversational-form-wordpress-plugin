@@ -17,13 +17,18 @@ define('CF_DIR_URL', plugins_url('', CF_BASENAME));
 
 
 // Defining DB version and table name as globals
+
 $cf_db_version = '1.0';
 $table_name = $wpdb->prefix . 'conversational_form';
+
 global $cf_db_version;
 global $table_name;
 
 // Installing the plugin
 function cf_install() {
+	// ob_start();
+	
+
 	global $wpdb;
 	global $cf_db_version;
 	global $table_name;
@@ -31,9 +36,9 @@ function cf_install() {
 	
 	$charset_collate = $wpdb->get_charset_collate();
 
-	try {
+
 		$sql = "CREATE TABLE ".$table_name." (
-			id int(9) NOT NULL AUTO_INCREMENT,
+			id int(9) primary key NOT NULL AUTO_INCREMENT,
 			time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
 			name varchar(255) NOT NULL,
 			slug varchar(55) DEFAULT '' NOT NULL,
@@ -42,45 +47,44 @@ function cf_install() {
 			confirmation_message varchar(255) NULL,
 			mailto varchar(255) NULL,
 			user_image varchar(255) NULL,
-			robot_image varchar(255) NULL,
-			PRIMARY KEY  (id)
+			robot_image varchar(255) NULL
 		) ".$charset_collate.";";
 
+		
 		require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-		 
 		dbDelta( $sql );
 
 		$sql = "CREATE TABLE ".$table_name."_inputs (
-			id int(9) NOT NULL AUTO_INCREMENT,
+			id int(9) primary key NOT NULL AUTO_INCREMENT,
 			form_id int(9) DEFAULT 0 NOT NULL,
 			questions text NOT NULL,
 			label text NOT NULL,
 			name varchar(255) DEFAULT '' NOT NULL,
 			type varchar(55) DEFAULT '' NOT NULL,
 			pattern varchar(255) DEFAULT '' NOT NULL,
+			errors varchar(255) DEFAULT '' NOT NULL,
 			time datetime DEFAULT '0000-00-00 00:00:00' NOT NULL,
-			input_order int(9) DEFAULT 0 NOT NULL,
-			PRIMARY KEY (id),
-			FOREIGN KEY (form_id) REFERENCES ".$table_name." (id)
+			input_order int(9) DEFAULT 0 NOT NULL
 		) ".$charset_collate.";";
 
 
 		dbDelta( $sql );
-	} catch (Exception $e) {
-		print_r($e);
-		
-	}
 
 	add_option( 'cf_db_version', $cf_db_version );
+	cf_install_data();
 
+	// ob_clean();
 }
+
+// register_activation_hook( __FILE__, 'cf_install' );
 
 // Setting default datas for example form
 function cf_install_data() {
+
 	global $wpdb;
 	global $table_name;
 	
-	try {
+	// try {
 		$wpdb->insert( 
 			$table_name, 
 			array( 
@@ -165,24 +169,21 @@ function cf_install_data() {
 				'input_order' => 5,
 			) 
 		);
-	} catch (Exception $e) {
-		print_r($e);
-	}
-	
+	// } catch (Exception $e) {
+	// 	print_r($e);
+	// }
 }
 
-register_activation_hook( __FILE__, 'cf_install' );
-register_activation_hook( __FILE__, 'cf_install_data' );
+// register_activation_hook( __FILE__, 'cf_install_data' );
 
-
-// Checking for updates of db version
-function cf_update_db_check() {
-    global $cf_db_version;
-    if ( get_site_option( 'cf_db_version' ) != $cf_db_version ) {
-        cf_install();
-    }
-}
-add_action( 'plugins_loaded', 'cf_update_db_check' );
+// // // Checking for updates of db version
+// function cf_update_db_check() {
+//     global $cf_db_version;
+//     if ( get_site_option( 'cf_db_version' ) != $cf_db_version ) {
+//         cf_install();
+//     }
+// }
+// add_action( 'plugins_loaded', 'cf_update_db_check' );
 
 
 // Loading front end scripts
@@ -198,7 +199,7 @@ function cf_load_admin_scripts() {
     wp_enqueue_script('jquery');
 	wp_register_script( 'jquery-ui-sortableOnly', CF_DIR_URL. '/js/jquery-ui-sortableOnly.min.js' , array('jquery'));
     wp_enqueue_script('jquery-ui-sortableOnly');
-    wp_register_script( 'cf-admin-js', CF_DIR_URL. '/js/admin.js' , array('jquery'),'1.0.3');
+    wp_register_script( 'cf-admin-js', CF_DIR_URL. '/js/admin.js' , array('jquery'),'1.0.4');
     wp_enqueue_script('cf-admin-js');
     
 	wp_register_style('cf-admin-style', CF_DIR_URL. '/css/admin.css' , dirname(__FILE__),'1.1.9' );
@@ -231,7 +232,12 @@ function cf_load_translations(){
 
 // Setting up menu
 function cf_setup_menu(){
-        add_menu_page( 'Conversational form page', 'Conversational form', 'manage_options', 'conversational-form', 'cf_admin_init' );
+        add_menu_page( 
+        	'Conversational form page',
+        	'Conversational form',
+        	'manage_options',
+        	'conversational-form',
+        	'cf_admin_init' );
 }
 add_action('admin_menu', 'cf_setup_menu');
 
@@ -240,7 +246,13 @@ function cf_admin_init(){
 	global $wpdb;
     global $table_name;
 
-    
+
+   	global $cf_db_version;
+   	
+   	if ( get_site_option( 'cf_db_version' ) != $cf_db_version ) {
+    	cf_install();
+   	}
+
     cf_load_translations();
 	cf_load_admin_scripts();
 
@@ -463,7 +475,7 @@ function update_input(){
 			
 			$res = array(
 				"message"=> "Done",
-				"input_id"=>intval($id),
+				"input_id"=>intval($id)
 			);
 		} catch (Exception $e) {
 			$res = array(
